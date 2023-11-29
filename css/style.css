@@ -580,25 +580,32 @@ a {
 
 /* -------------------------section4---------------------- */
 .section4 {
-/* 	padding: 138px 92px 138px 350px; */
-background-color: #37393F;
+	background-color: #37393F;
 }
 
-.consulting__foto {
+/* фото справа */
+.consulting__foto {		
 	flex: 0 1 50%;
+}
+
+@media (max-width:1330px){
+	.consulting__foto  {
+		display: none; /* прибрали фото справа */
+	}
 }
 
 .consulting__foto img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-
 }
+/* фото справа */
 
 
 
+/* блок слева */
 .consulting {
-	display: flex;
+	display: flex;			/* в линию серый блок и фото */
 	flex-direction: row;
 }
 
@@ -606,12 +613,18 @@ background-color: #37393F;
 	color: #FFF;
 	z-index: 2;
 
-	max-width: 750px;
-	padding: 138px 15px;
+	max-width: 700px;
+	padding: 138px 30px;
 	margin: 0 auto;
 
 	flex: 0 1 50%;
+}
 
+@media (max-width:1330px){
+	.consulting__container {
+		flex: 0 1 100%;
+		padding: 80px 30px;
+	}
 }
 
 .consulting__container h4 {
@@ -622,6 +635,12 @@ background-color: #37393F;
 
 	display: flex;
 	gap: 6px;
+}
+
+@media (max-width:370px){
+	.consulting__container h4 {
+		font-size: 16px;
+	}
 }
 
 .consulting__container h4::before {
@@ -642,6 +661,13 @@ background-color: #37393F;
 	margin-bottom: 13px;
 }
 
+@media (max-width:370px){
+	.consulting__container h5 {
+		font-size: 25px;
+		padding-right: 30px;
+	}
+}
+
 .consulting__text {
 	font-family: 'Inter';
 	font-size: 18px;
@@ -653,37 +679,41 @@ background-color: #37393F;
 .consulting__cards {
  	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -15px;
 }
-.card {
-	flex: 0 1 50%;
-	padding: 0px 15px;
 
+.cards {
+	flex: 1 1 50%;
 }
-.consulting__cards img{
+.cards img{
 	padding: 27px 30px;
 	background-color: #2E2F34;
 	margin-bottom: 36px;
-	flex: 1 1 auto;
-
 }
 
+
 /* menu */
-.consulting__list {
+.cards__list {
 	display: flex;
 	flex-direction: column;
 }
 
-.consulting__link {	
+.cards__link {	
 	margin-right: 37px;
 	font-family: 'Poppins';
 	font-size: 20px;
 	display: flex;
 	gap: 8px;
+}
+@media (max-width:693px) {
+	.cards__list {
+		flex: 1 1 100%;
+	}
+}
+.cards__link:not(:last-child) {
 	margin-bottom: 23px;
 }
 
-.consulting__link::before {
+.cards__link::before {
 	background-image: url(../img/01.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -694,7 +724,7 @@ background-color: #37393F;
 	flex: 0 0 27px;
 	transform: translateY(-3px);
 }
-.consulting__link--green {
+.cards__link--green {
 	color: #40DDB6;
 	text-align: center;
 	font-family: 'Inter';
