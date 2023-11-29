@@ -70,7 +70,23 @@
 /* -------------------------section1---------------------- */
 .section1 {
 	padding: 180px 0px 80px 0px;
+	background-color: #FEFAF4;;
 }
+
+.section1__img {
+	position: relative;
+}
+.section1__img img{
+	position: absolute;
+	bottom: -170px;
+	right: 0;
+}
+@media (max-width:1352px){
+	.section1__img img{
+		display: none;
+	}
+}
+
 
 .page-jewellery__container h1 {
 	color: #000;
