@@ -579,31 +579,39 @@ a {
 
 
 /* -------------------------section4---------------------- */
-/* .section4 {} */
+.section4 {
+/* 	padding: 138px 92px 138px 350px; */
+background-color: #37393F;
+}
 
 .consulting__foto {
-	aspect-ratio: 868px / 741px;
+	flex: 0 1 50%;
 }
 
 .consulting__foto img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
 }
 
 
 
 .consulting {
 	display: flex;
+	flex-direction: row;
 }
 
 .consulting__container {
-	padding: 138px 92px 138px 350px;
-	background-color: #37393F;
 	color: #FFF;
 	z-index: 2;
+
+	max-width: 750px;
+	padding: 138px 15px;
 	margin: 0 auto;
-/* 	max-width: 700px; */
+
+	flex: 0 1 50%;
+
 }
 
 .consulting__container h4 {
@@ -643,21 +651,27 @@ a {
 
 /* cards */
 .consulting__cards {
-	display: flex;
+ 	display: flex;
 	flex-wrap: wrap;
-	gap: 15px;
-	margin-bottom: 36px;
+	margin: 0 -15px;
+}
+.card {
+	flex: 0 1 50%;
+	padding: 0px 15px;
 
 }
 .consulting__cards img{
 	padding: 27px 30px;
 	background-color: #2E2F34;
+	margin-bottom: 36px;
+	flex: 1 1 auto;
 
 }
 
 /* menu */
 .consulting__list {
 	display: flex;
+	flex-direction: column;
 }
 
 .consulting__link {	
